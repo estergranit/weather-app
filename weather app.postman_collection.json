@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "2844b1c2-edb7-4cba-9d45-43053aff812c",
+		"name": "weather app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "http://localhost:3000/createAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Eti\",\r\n    \"password\": 1,\r\n    \"email\": \"eti0504102601@gmail.com\",\r\n    \"users\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/createAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"createAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/loginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Eti\",\r\n    \"password\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/postAdminByNamePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"postAdminByNamePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/updateAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Eti\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/updateAdmin/Dani",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateAdmin",
+								"Dani"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/deleteUser/62802a49941b088899e6880e",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deleteUser/6280ecd41c7e2b96cd9660d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deleteUser",
+								"6280ecd41c7e2b96cd9660d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "weather",
+					"item": [
+						{
+							"name": "http://localhost:3000/createWeather/6277f08c6d2e1797f4e109e6/Jerusalem/Haifa/Tel-aviv/Ashkelon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/createWeather/6277f08c6d2e1797f4e109e6/Jerusalem",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"createWeather",
+										"6277f08c6d2e1797f4e109e6",
+										"Jerusalem"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3000/deleteWeather/627d20e7eb8bac06cb24feae",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3000/getWeathersByUserId/627d20e7eb8bac06cb24feae",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3000/getWeatherById/627d2cf3839e88f9c990dec4",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/getWeatherById/627d2bf2bdb0fee914789b02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"getWeatherById",
+										"627d2bf2bdb0fee914789b02"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"David\",\r\n    \"password\": 11,\r\n    \"email\": \"david0504102601@gmail.com\",\r\n    \"weathers\":[],\r\n    \"adminId\":\"6277e9b5b6c7b6b6efb53e0d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/loginUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/updateUserEmail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"David\",\r\n    \"email\": \"6102601@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/updateUserEmail/David",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateUserEmail",
+								"David"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/getUserById/627d375464e855c5488636ab",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
